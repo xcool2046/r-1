@@ -1,0 +1,289 @@
+/* Projects Section Styles */
+#projects-log {
+    background: var(--bg-primary);
+    position: relative;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+/* Project Cards */
+.log-entry-card {
+    background: rgba(17, 34, 64, 0.8);
+    border: 1px solid var(--text-secondary);
+    border-left: 3px solid var(--accent-cyan);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    position: relative;
+    transition: all var(--transition-normal);
+    overflow: hidden;
+}
+
+.log-entry-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta), var(--accent-purple));
+    transform: translateX(-100%);
+    transition: transform var(--transition-slow);
+}
+
+.log-entry-card:hover::before {
+    transform: translateX(0);
+}
+
+.log-entry-card:hover {
+    border-left-color: var(--accent-magenta);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Card Header */
+.log-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.log-id {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    color: var(--accent-cyan);
+    text-shadow: var(--glow-cyan);
+    margin-bottom: var(--spacing-xs);
+}
+
+.log-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-sm);
+}
+
+.log-meta {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Card Content */
+.log-objective {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.log-tasks {
+    list-style: none;
+    margin-bottom: var(--spacing-md);
+}
+
+.log-tasks li {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.log-tasks li::before {
+    content: '>>';
+    position: absolute;
+    left: 0;
+    color: var(--accent-cyan);
+    font-weight: bold;
+}
+
+.log-learnings {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent-orange);
+    background: rgba(255, 165, 0, 0.1);
+    border: 1px solid var(--accent-orange);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+/* Card Footer */
+.log-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--text-secondary);
+}
+
+.log-status {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-cyan);
+    background: rgba(100, 255, 218, 0.1);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-cyan);
+}
+
+.log-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.log-link {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-magenta);
+    border: 1px solid var(--accent-magenta);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-normal);
+    background: transparent;
+}
+
+.log-link:hover {
+    background: rgba(245, 0, 87, 0.1);
+    box-shadow: var(--glow-magenta);
+}
+
+/* Corner Brackets */
+.log-entry-card::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent-cyan);
+    border-left: none;
+    border-bottom: none;
+    opacity: 0.3;
+    transition: opacity var(--transition-normal);
+}
+
+.log-entry-card:hover::after {
+    opacity: 1;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+}
+
+.tech-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-primary);
+    background: rgba(123, 0, 224, 0.2);
+    border: 1px solid var(--accent-purple);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.tech-tag:hover {
+    background: rgba(123, 0, 224, 0.3);
+    transform: scale(1.05);
+}
+
+/* Loading Animation for Dynamic Content */
+.projects-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-family: var(--font-mono);
+    color: var(--accent-cyan);
+    font-size: 1.2rem;
+}
+
+.loading-dots::after {
+    content: '';
+    animation: loadingDots 1.5s infinite;
+}
+
+@keyframes loadingDots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .log-entry-card {
+        padding: var(--spacing-md);
+    }
+    
+    .log-id {
+        font-size: 1rem;
+    }
+    
+    .log-title {
+        font-size: 1.2rem;
+    }
+    
+    .log-objective {
+        font-size: 0.9rem;
+    }
+    
+    .log-tasks li {
+        font-size: 0.85rem;
+    }
+    
+    .log-footer {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        gap: var(--spacing-md);
+    }
+    
+    .log-entry-card {
+        padding: var(--spacing-sm);
+    }
+    
+    .log-id {
+        font-size: 0.9rem;
+    }
+    
+    .log-title {
+        font-size: 1.1rem;
+    }
+    
+    .log-objective {
+        font-size: 0.85rem;
+    }
+    
+    .log-tasks li {
+        font-size: 0.8rem;
+    }
+    
+    .tech-stack {
+        gap: 4px;
+    }
+    
+    .tech-tag {
+        font-size: 0.65rem;
+    }
+} 
