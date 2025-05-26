@@ -3,193 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JianXiaoli - 建筑工程师 | 创新设计 | BIM集成 | 参数化思维">
-    <meta name="keywords" content="建筑工程师, BIM, 参数化设计, 可持续发展, 智慧城市, 算法设计">
-    <meta name="author" content="JianXiaoli">
-    <title>JianXiaoli // Arch_Engineer</title>
+    <title>简小历 - 建筑工程师个人作品集网站</title>
+    <meta name="description" content="简小历，专业建筑工程师，具备扎实土木基础与设计能力，熟悉行业规范与管理程序，专注建筑工程，构筑坚实未来。">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Roboto+Mono:wght@300;400;500&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS Reset -->
-    <link rel="stylesheet" href="css/reset.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Framer Motion -->
+    <script src="https://unpkg.com/framer-motion@11.0.8/dist/framer-motion.js"></script>
     
-    <!-- Component Stylesheets -->
-    <link rel="stylesheet" href="css/components/navigation.css">
-    <link rel="stylesheet" href="css/components/hero.css">
-    <link rel="stylesheet" href="css/components/about.css">
-    <link rel="stylesheet" href="css/components/projects.css">
-    <link rel="stylesheet" href="css/components/skills.css">
-    <link rel="stylesheet" href="css/components/education.css">
-    <link rel="stylesheet" href="css/components/contact.css">
-    <link rel="stylesheet" href="css/components/footer.css">
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
-    <!-- Animations and Effects -->
-    <link rel="stylesheet" href="css/animations.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Particle Background Container -->
-    <div id="particles-js"></div>
+<body class="bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-gray-200 font-['Open_Sans']">
+    <!-- Particles Background -->
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
     
     <!-- Navigation -->
-    <nav id="main-nav">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">JianXiaoli // Arch_Engineer</span>
+    <header class="fixed top-0 w-full z-50 bg-slate-800/80 backdrop-blur-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold font-['Rajdhani'] text-white">
+                    简小历
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="nav-link">首页</a></li>
+                    <li><a href="#about" class="nav-link">关于我</a></li>
+                    <li><a href="#experience" class="nav-link">实践经历</a></li>
+                    <li><a href="#skills" class="nav-link">专业技能</a></li>
+                    <li><a href="#contact" class="nav-link">联系方式</a></li>
+                </ul>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#hero-console" class="nav-link active">>_HOME</a></li>
-                <li><a href="#system-core-info" class="nav-link">>_SYSTEM.CORE_INFO</a></li>
-                <li><a href="#projects-log" class="nav-link">>_PROJECT.LOGS</a></li>
-                <li><a href="#skill-matrix" class="nav-link">>_SKILL.MATRIX</a></li>
-                <li><a href="#contact-relay" class="nav-link">>_CONTACT.RELAY</a></li>
-            </ul>
-            <div class="nav-cta">
-                <a href="assets/JianXiaoli_CV.pdf" download class="cta-download">
-                    [ DOWNLOAD_ENCRYPTED_CV.PDF ]
-                </a>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="hero-console">
-        <div class="console-content">
-            <p class="welcome-text">// Welcome to Node_JXL-001</p>
-            <h1 class="main-title">Name: JianXiaoli_Architectural_Engineer</h1>
-            <p class="directive">> Primary_Directive: Innovate. Design. Construct. <span class="highlight">// Bridging digital intelligence with tangible spaces.</span></p>
-            
-            <div class="keywords-cloud">
-                <span class="keyword-tag">[ BIM_Integration ]</span>
-                <span class="keyword-tag">[ Parametric_Thinking ]</span>
-                <span class="keyword-tag">[ Sustainable_Futures ]</span>
-                <span class="keyword-tag">[ Urban_Tech_Solutions ]</span>
-                <span class="keyword-tag">[ Algorithmic_Design_Principles ]</span>
-            </div>
-            
-            <p class="status">> System_Status: Actively_Seeking_Collaborative_Challenges_&_Full-Time_Roles</p>
-            
-            <div class="cta-buttons">
-                <a href="#projects-log" class="cta-btn">[ Initiate_Project_Scan >> ]</a>
-                <a href="#contact-relay" class="cta-btn">[ Establish_Comms_Link >> ]</a>
-            </div>
-            
-            <div class="avatar-hud">
-                <img src="assets/avatar.jpg" alt="JianXiaoli Professional Avatar" class="avatar-image">
-                <div class="hud-overlay"></div>
+    <section id="home" class="relative min-h-screen flex items-center justify-center z-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="hero-content">
+                <h1 class="text-6xl md:text-8xl font-bold font-['Rajdhani'] mb-6 bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent">
+                    简小历
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-cyan-400">
+                    建筑工程师
+                </h2>
+                <p class="text-xl md:text-2xl font-['Rajdhani'] mb-8 text-gray-300">
+                    专注建筑工程，构筑坚实未来
+                </p>
+                <p class="text-lg mb-12 max-w-3xl mx-auto leading-relaxed">
+                    对建筑工作兴趣浓厚，具备扎实土木基础与设计能力，熟悉行业规范与管理程序，追求卓越，乐于协作。
+                </p>
+                <a href="#about" class="cta-button inline-block px-8 py-4 bg-gradient-to-r from-cyan-400 to-pink-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300">
+                    了解更多
+                </a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="system-core-info">
-        <div class="container">
-            <h2 class="section-title">> LOAD SYSTEM.CORE_INFO</h2>
-            <div class="core-info-content">
-                <div class="info-block">
-                    <h3>// User_Profile: JianXiaoli</h3>
-                    <div class="profile-content">
-                        <p>建筑工程师，专注于数字化设计与智能建造的交叉领域。致力于运用计算工具和数据驱动的洞察力，创造不仅仅是结构，而是响应性和韧性环境的未来建筑。</p>
+    <section id="about" class="relative py-20 z-10">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-4xl font-bold font-['Rajdhani'] text-center mb-16">关于我</h2>
+            
+            <div class="bento-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Avatar -->
+                <div class="bento-item col-span-1 md:col-span-1 lg:col-span-1 aspect-square">
+                    <div class="h-full flex items-center justify-center">
+                        <div class="avatar-container w-32 h-32 md:w-40 md:h-40 rounded-full p-1">
+                            <img src="avatar.jpg" alt="简小历的个人头像" class="w-full h-full object-cover rounded-full">
+                        </div>
                     </div>
                 </div>
                 
-                <div class="info-block">
-                    <h3>// Philosophy:</h3>
-                    <blockquote class="philosophy-quote">
-                        "我的核心信念是建筑的未来在于以人为本的设计与智能系统的交汇点。我致力于利用生成式设计和数字制造的潜力，在可持续性和用户体验方面进行优化。"
-                    </blockquote>
+                <!-- Education -->
+                <div class="bento-item col-span-1 md:col-span-2 lg:col-span-2">
+                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">教育背景</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-semibold">北京某某建筑大学 - 工程管理 (学士学位)</h4>
+                            <p class="text-gray-400">20XX.09 - 20XX.06</p>
+                        </div>
+                        <p class="text-sm">
+                            <strong>主修课程：</strong>工程经济学、城市规划、建筑材料、建设工程法规、土木工程施工、项目管理等。
+                        </p>
+                        <p class="text-sm text-cyan-300">
+                            连续2年获校综合奖学金"励志奖"；荣获校三好学生。
+                        </p>
+                    </div>
                 </div>
                 
-                <div class="info-block">
-                    <h3>// Academic_Matrix:</h3>
-                    <p class="academic-info">
-                        [ Beijing_XXX_University_Of_Architecture | B.Eng. Engineering_Management | Focus_Modules: Advanced_Construction_Tech, Smart_City_Concepts, BIM_Fundamentals ]
+                <!-- Self Introduction -->
+                <div class="bento-item col-span-1 md:col-span-3 lg:col-span-3">
+                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">自我概述</h3>
+                    <p class="leading-relaxed">
+                        对建筑工作兴趣浓厚，有扎实的土木基础知识，接受过正规的建筑设计美术教育，能够根据需要进行设计制作。熟悉甲方现场管理程序，熟悉国家、行业规范、强制性标准条文及法律、法规文件，能够独立完成工作。性格随和，沉着冷静，工作独立性较强，做事认真细致，积极主动，责任心与上进心较强，具有良好的沟通协调能力与合作的团队精神。
                     </p>
                 </div>
                 
-                <div class="info-block">
-                    <h3>// Operational_Style:</h3>
-                    <p>我以"解构-重建"的思维方式应对挑战，寻求复杂问题的优雅解决方案。我的工作风格建立在对细节的严格关注、主动的创新精神和对透明、协作团队合作的承诺之上。</p>
-                </div>
-                
-                <div class="info-block">
-                    <h3>// Extracurricular_Protocols:</h3>
-                    <div class="protocols-list">
-                        <span class="protocol-item">[ Actively_Exploring_Python_For_Rhino/Grasshopper ]</span>
-                        <span class="protocol-item">[ Hobbyist_Drone_Photographer_For_Urban_Analysis ]</span>
-                        <span class="protocol-item">[ Contributor_To_Open_Source_Mapping_Projects ]</span>
+                <!-- Personal Info -->
+                <div class="bento-item col-span-1 md:col-span-1 lg:col-span-1">
+                    <h3 class="text-lg font-semibold mb-4 text-cyan-400">基本信息</h3>
+                    <div class="space-y-2 text-sm">
+                        <p>年龄: 22岁</p>
+                        <p>政治面貌: 中共党员</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects-log">
-        <div class="container">
-            <h2 class="section-title">> ACCESSING PROJECT.LOGS_ARCHIVE</h2>
-            <div class="projects-grid">
-                <!-- Projects will be loaded by JavaScript -->
+    <!-- Experience Section -->
+    <section id="experience" class="relative py-20 z-10">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-4xl font-bold font-['Rajdhani'] text-center mb-16">实践经历</h2>
+            
+            <div class="bento-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Work Experience -->
+                <div class="bento-item col-span-1 md:col-span-2 lg:col-span-2 relative">
+                    <div class="absolute top-4 right-4">
+                        <button class="detail-btn text-cyan-400 hover:text-pink-400 transition-colors" data-modal="work-modal">
+                            <i class="fas fa-plus-circle text-xl"></i>
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-cyan-400">实习助理</h3>
+                    <p class="text-gray-400 mb-4">北京某区某某单位 | 20XX.10 - 20XX.06</p>
+                    <ul class="space-y-2 text-sm">
+                        <li>• 负责项目报批报建、中间验收、竣工验收及工程项目预决算</li>
+                        <li>• 编制或评估设计招标方案，参与工程项目设计招标</li>
+                        <li>• 负责扩初设计和施工图设计的审核</li>
+                        <li>• 对施工项目的质量、成本、安全、进度进行有效控制</li>
+                    </ul>
+                </div>
+                
+                <!-- Campus Experience -->
+                <div class="bento-item col-span-1 md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-semibold mb-2 text-cyan-400">宣传干事</h3>
+                    <p class="text-gray-400 mb-4">学生会某某某部门 | 20XX.09 - 20XX.06</p>
+                    <ul class="space-y-2 text-sm">
+                        <li>• 任学生会宣传干部，多次参与学院大型活动的筹备与现场工作</li>
+                        <li>• 负责为学校活动洽谈赞助，策划活动流程</li>
+                        <li>• 成功策划并推广某互联网产品校园活动，吸引超5000用户注册</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skill-matrix">
-        <div class="container">
-            <h2 class="section-title">> DISPLAY SKILL.MATRIX_CONFIGURATION</h2>
-            <div class="skills-content">
-                <!-- Skills will be loaded by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="origin-code">
-        <div class="container">
-            <h2 class="section-title">> EXECUTE ORIGIN.CODE_ANALYSIS</h2>
-            <div class="education-content">
-                <!-- Education content will be loaded by JavaScript -->
+    <section id="skills" class="relative py-20 z-10">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-4xl font-bold font-['Rajdhani'] text-center mb-16">专业技能</h2>
+            
+            <div class="bento-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Certificates -->
+                <div class="bento-item col-span-1 md:col-span-1 lg:col-span-1">
+                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">专业证书</h3>
+                    <div class="space-y-2">
+                        <span class="skill-tag">大学英语六级证书</span>
+                        <span class="skill-tag">从业资格证书</span>
+                        <span class="skill-tag">计算机二级证书</span>
+                        <span class="skill-tag">普通话一级甲等</span>
+                    </div>
+                </div>
+                
+                <!-- Professional Skills -->
+                <div class="bento-item col-span-1 md:col-span-2 lg:col-span-2">
+                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">掌握技能</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold mb-2">核心建筑技能</h4>
+                            <p class="text-sm">熟悉建筑设计工作流程；熟悉土建设计规范与标准；可熟练进行钢结构设计。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">软件技能</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag">PKPM</span>
+                                <span class="skill-tag">MIDAS</span>
+                                <span class="skill-tag">CAD</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">办公技能</h4>
+                            <span class="skill-tag">WPS办公软件 (数据统计、文字处理)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact-relay">
-        <div class="container">
-            <h2 class="section-title">> ESTABLISH_SECURE_COMMUNICATION_LINK</h2>
-            <div class="contact-content">
-                <!-- Contact form and info will be loaded by JavaScript -->
+    <section id="contact" class="relative py-20 z-10">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-4xl font-bold font-['Rajdhani'] text-center mb-16">保持联系</h2>
+            
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="space-y-6">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope text-2xl text-cyan-400 mb-2"></i>
+                        <p class="text-lg">
+                            <a href="mailto:jianlixiazai@qq.com" class="hover:text-cyan-400 transition-colors">
+                                jianlixiazai@qq.com
+                            </a>
+                        </p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone text-2xl text-cyan-400 mb-2"></i>
+                        <p class="text-lg">
+                            <a href="tel:18888888888" class="hover:text-cyan-400 transition-colors">
+                                18888888888
+                            </a>
+                        </p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt text-2xl text-cyan-400 mb-2"></i>
+                        <p class="text-lg">北京市朝阳区</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="page-footer">
-        <div class="footer-content">
-            <p class="session-time">// Session_End_Time: <span id="current-time"></span></p>
-            <p class="copyright">// Design_&_Code_Integrity_Maintained_By_JianXiaoli_©_<span id="current-year"></span></p>
-            <div class="social-links">
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">GitHub</a>
+    <footer class="relative py-8 z-10 border-t border-cyan-400/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="mb-4">
+                    <div class="flex justify-center space-x-4 mb-2">
+                        <div class="w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500"></div>
+                        <div class="w-4 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500"></div>
+                        <div class="w-6 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500"></div>
+                    </div>
+                </div>
+                <p class="text-slate-400">
+                    © <span id="current-year"></span> 简小历. 保留所有权利.
+                </p>
             </div>
         </div>
-        <button id="back-to-top" class="back-to-top">↑</button>
     </footer>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    
-    <!-- Main JavaScript Modules -->
-    <script type="module" src="js/main.js"></script>
+    <!-- Modal for Work Experience Details -->
+    <div id="work-modal" class="modal fixed inset-0 z-50 hidden">
+        <div class="modal-overlay absolute inset-0 bg-slate-900/90" onclick="closeModal('work-modal')"></div>
+        <div class="modal-content relative max-w-2xl mx-auto mt-20 bg-slate-800 rounded-lg p-8 m-4">
+            <button class="absolute top-4 right-4 text-gray-400 hover:text-white" onclick="closeModal('work-modal')">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold mb-4 text-cyan-400">实习助理 - 详细信息</h3>
+            <div class="space-y-4">
+                <div>
+                    <h4 class="font-semibold text-lg mb-2">公司：北京某区某某单位</h4>
+                    <p class="text-gray-400">时间：20XX.10 - 20XX.06</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">主要职责：</h4>
+                    <ul class="space-y-2">
+                        <li>• 负责项目报批报建、中间验收、竣工验收及工程项目预决算。</li>
+                        <li>• 编制或评估设计招标方案，参与工程项目设计招标，审核建筑设计要点。</li>
+                        <li>• 负责扩初设计和施工图设计的审核，协调解决关联专业设计问题。</li>
+                        <li>• 对施工项目的质量、成本、安全、进度进行有效控制。</li>
+                        <li>• 协助项目经理处理日常事务，参与重要决策的制定和执行。</li>
+                        <li>• 与各方协调沟通，确保项目按时按质完成。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html> 
